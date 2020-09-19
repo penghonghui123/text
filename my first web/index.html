@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <title>にしみや しょうこ</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div.container {
+            background-image: url("image/shape.jpg");
+            background-size: 100%;
+            height: 800px;
+            width: 1540px;
+            position: absolute;
+            top:-30px;
+            left: -10px;
+        
+        }
+
+        .syko {
+            position: absolute;
+            left: 710px;
+            top:22%;
+        }
+
+        .syouko{
+            display: block;
+
+        }
+
+       
+
+        #syouko2{
+            height: 200px;
+            width: 180px;
+            border-radius: 100%;
+            display: none;
+            opacity: .94;
+        }
+
+        #syouko1{
+            height: 200px;
+            width: 180px;
+            border-radius: 100%;
+            opacity: .96;
+            
+        }
+
+
+    </style>
+
+</head>
+
+
+<body>
+
+    <div class='container'>
+
+        <div class='syko'>
+       
+        
+        <img id='syouko1' class = 'syouko'  src="image/aa.jpg" alt="s">
+        <a href="Voice.html"><img id='syouko2' class ='syouko'  src="image/a.jpg" alt="d"></a>
+       
+    
+    </div>    
+
+
+    </div>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(function() {
+            $('#syouko1').on('mouseenter',function(){
+                $('#syouko1').slideUp();
+                $('#syouko2').slideDown();
+                
+            })
+
+            $('#syouko2').on('mouseleave',function(){
+                $('#syouko2').slideUp();
+                $('#syouko1').slideDown();
+                
+
+            })
+           
+        }
+    )
+    </script>
+    
+</body>
+
+
+
+
+
+
+
+</html>

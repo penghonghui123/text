@@ -1,0 +1,4 @@
+FBD18c1572bb
+
+
+/*  src:文件路径  autoplay:自动播放 loop:循环  muted:静音 preload:预加载（使用aotoplay，preload自动失效） poster海报*/  video

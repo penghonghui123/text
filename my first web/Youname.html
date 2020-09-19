@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>The Shape of Vioce</title>
+
+    <style>
+        
+        body {
+            margin: 0;
+            height: 2000px;
+            background-color:rgb(252, 206, 214);
+           
+        }
+
+
+
+
+
+
+    .nav1 {
+        position: absolute;
+        top:9px;
+        display:flex;
+        left: 280px;
+        margin:0px;
+        padding:0px;
+     
+    }
+
+    .nav1 li {
+        list-style-type: none;
+    }
+
+
+    .nav1 li a{
+        position: relative;
+        display: block;
+        text-align:center;
+        margin:0 35px;
+        color:white;
+        font-size:18px;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .5s;
+        padding: 4px 25px;
+        background-color:rgb(236, 128, 146);
+        border-radius: 8px;
+
+    }
+
+    .nav2 {
+        position:absolute;
+        left: -80px;
+
+    }
+
+    .nav3 {
+        position:absolute;
+        right: -160px;
+
+    }
+
+
+    .nav1 li a::before {
+        content: ' ';
+        position: absolute;
+        bottom:10px;
+        left: 10px;
+        width: 10px;
+        height: 12px;
+        border: 3px solid rgb(240, 35, 70);
+        border-width:0 0 3px 3px;
+        transition: .5s;
+        opacity: 0;
+
+    }
+
+    .nav1 li a::after{
+        content: ' ';
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        width: 12px;
+        height: 12px;
+        border: 3px solid rgb(240, 35, 70);
+        border-width:3px 3px 0 0 ;
+        transition: .5s;
+        opacity:0;
+
+    }
+
+
+    .nav1 li :hover::before {
+        bottom:-6px;
+        left:-6px;
+        opacity: 1;
+    }
+
+    .nav1 li :hover::after {
+        top: -6px;
+        right: -6px;
+        opacity: 1;
+    }
+
+
+    .nav1 li a:hover{
+        color:white;
+        background-color:rgb(240, 35, 70);
+    }
+
+
+
+
+
+
+
+
+
+        ul{
+            list-style-type: none;
+        }
+
+        .container {
+            width: 1400px;
+            height: 760px;
+            overflow:hidden;
+        }
+
+        .item{
+            margin:51px 30px 5px 120px;
+            position: absolute;
+            
+        }
+
+        .item img{
+            width :1281px;
+            height: 700px;
+            border-radius: 16px;
+        
+        }
+
+        #tabs{
+            position: absolute;
+            right:114px;
+            bottom: 10px;
+        }
+
+        .tab{
+            float:left;
+            margin-right: 15px;
+            width:8px;
+            height: 8px;
+            border:6px solid(184,178,182,.8);
+            border-radius: 50%;
+            background-color:white;
+            cursor:pointer;
+        }
+
+        .active{
+            background:black;
+            border-color:white;
+        }
+
+        .btn{
+            position: absolute;
+            top:44%;
+            width:40px;
+            height: 40px;
+            color:white;
+            font-size: 36px;
+            line-height: 35px;
+            text-align: center;
+            cursor: pointer;  
+
+            
+        }
+
+        .btn:hover{
+          background:rgb(236, 82, 55);
+          color:white;
+          opacity: 0.8;
+          
+        }
+
+
+        .prev{
+            position: absolute;
+            left:65px;
+            border-radius: 50%;
+        }
+
+        .next{
+            position: absolute;
+            right:65px;
+            border-radius: 50%;
+        }
+
+        .vido {
+            background-image: url("image/youname2.jpg");
+            background-size: 1400px;
+            background-position: center;
+            margin: 35px 0 0 0;
+            position:absolute;
+            left: 62px;
+            height: 800px;
+            width: 1400px;
+            background-repeat: no-repeat;
+            border-radius:10px
+
+        }
+
+        .vd1 {
+            position: absolute;
+            top :180px;
+            left:240px;
+            width:855px;
+            height: 482px;
+        }
+ 
+
+    </style>
+
+</head>
+
+<body>
+
+
+
+    <nav>   
+    <ul class='nav1'>
+        <li><a class='nav2' href="#">  目 录  </a></li>
+        <li><a href="#">  动  漫  </a></li>
+        <li><a href="#">  漫  画  </a></li>
+        <li><a href="#">  小  说  </a></li>
+        <li><a href="#">  游  戏  </a></li>
+        <li><a class='nav3' href="#">  赞  助 </a></li>
+    </ul>
+    </nav>
+
+
+
+
+
+    <div class="container">
+        <a class ="item" href="Voice.html"> <img src="image/1.jpg" alt="声之形"></a>
+        <a class ="item" href="Youname.html"> <img src="image/youname1.jpg" alt="你的名字"></a>
+        <a class ="item" href="Weather.html"> <img src="image/weather1.jpg" alt="天气之子"></a>
+        <a class ="item" href="Violet.html"> <img src="image/violet.jpg" alt="紫罗兰花园"></a>
+    
+
+        <div class="btn prev"> < </div>
+        <div class="btn next"> > </div>
+
+        <ul id="tabs">
+            <li class="tab active"></li>
+            <li class="tab"></li>
+            <li class="tab"></li>
+            <li class="tab"></li>
+        </ul>
+
+    </div>
+
+
+
+
+
+    <div class="vido">
+
+        <video  class='vd1' autoplay controls loop muted src="video/youname.mp4"  ></video>
+
+    </div>
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            var i=0;
+            var timer;
+
+            $('.item').eq(0).show().siblings('.item').hide();
+            
+
+            function show(){
+                $('.item').eq(i).fadeIn(300).siblings('.item').fadeOut(300);
+                $('.tab').eq(i).addClass('active').siblings('.tab').removeClass('active');
+            }
+
+
+            function showTime(){
+                timer = setInterval(function(){
+                    show();
+                    i++;
+
+                    if(i==4){
+                        i=0;
+                    }
+
+                },2000);
+
+            }
+
+
+            showTime();
+
+
+            $('.tab').hover(function(){
+
+                i = $(this).index();
+
+                show();
+
+                clearInterval(timer);
+
+            },function(){
+
+                showTime();
+
+            });
+
+
+            $('.prev').click(function(){
+                clearInterval(timer);
+                if(i == 0){
+                    i = 5;
+                }
+                i--;
+                show();
+                showTime();
+
+            });
+
+            $('.next').click(function(){
+                clearInterval(timer);
+                if(i == 4){
+                    i = -1;
+                }
+                i++;
+                show();
+                showTime();
+
+            });
+
+
+
+        });
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
